@@ -7,19 +7,30 @@
     <title>3DFileUploader1.0</title>
   </head>
   <body>
-    <div id="container">
-      <div id="navbar">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Profile</a></li>
-          <li><a href="">Browse</a></li>
-        </ul>
-      </div>
+    <div id="main-container">
+      <section id="header">
+        <h1>3D-Uploader</h1>
+        <!-- <nav id="navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="">Browse</a></li>
+          </ul>
+        </nav> -->
+      </section>
+
+      <!-- Sidebar for File Upload -->
+      <aside id="sidebar">
+        <h2>Upload Model</h2>
+        <input type="file" id="file-upload" accept=".obj, .gltf, .glb, .stl" />
+        <div id="lighting-selector"></div>
+      </aside>
+
       <div id="model-canvas">
-        <canvas height="100vh" width="100vw"></canvas>
+        <canvas width="100%" height="100%" id="stage"></canvas>
       </div>
-      <div id="lighting-selector"></div>
     </div>
+
     <script type="module" src="./index.js"></script>
   </body>
 </html>

@@ -9,10 +9,13 @@ body {
   margin: 0;
 }
 
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
 #navbar {
-  margin-top: 10px;
-  position: fixed;
-  width: 99vw;
   top: 0;
   background: radial-gradient(
     rgba(255, 255, 255, 0.1),
@@ -29,6 +32,9 @@ body {
 
   overflow: hidden;
   text-align: center;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 #navbar li {
@@ -46,5 +52,5 @@ body {
   color: rgba(0, 0, 0, 0);
   -webkit-text-stroke: 1px black;
   text-decoration: none;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
