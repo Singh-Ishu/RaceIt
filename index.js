@@ -17,7 +17,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   antialias: true,
 });
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(window.innerWidth * 0.5, window.innerHeight * 0.5);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 window.addEventListener("resize", () => {
@@ -66,7 +66,6 @@ fileInput.addEventListener("change", (event) => {
   }
 });
 
-// Animation Loop
 function animate() {
   controls.update();
   renderer.render(scene, camera);
