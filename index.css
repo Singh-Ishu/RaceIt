@@ -18,7 +18,8 @@ h1 {
 #main-container {
   display: grid;
   grid-template-columns: 25% 75%;
-  grid-template-rows: 25% 75%;
+  grid-template-rows: 20% 70%;
+  column-gap: 3%;
 }
 
 #header {
@@ -34,4 +35,16 @@ h1 {
 #model-canvas {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+}
+
+#sidebar div {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2px;
+  margin: 5px;
+  justify-items: center;
+
+  border-radius: 5px;
+  border: 1px solid white;
+
+  color: white;
 }
