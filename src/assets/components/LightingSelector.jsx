@@ -4,8 +4,8 @@ export default function LightingSelector() {
   function setLighting() {}
   return (
     <>
-      <Card />
-      <Card />
+      <Card NAME="Dawn" />
+      <Card NAME="Dusk" />
       <br />
       <Card />
       <Card />

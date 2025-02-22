@@ -1,10 +1,11 @@
-import "./Card.css";
-
-export default function Card() {
+export default function Card(props) {
   return (
     <div id="card-div">
-      <img src="" alt="lighting-descriptor:lighting 1" />
-      <p>Ambient Lighting</p>
+      <img
+        src={props.URL}
+        alt={`lighting-descriptor: ${props.NAME || "No name provided"}`}
+      />
+      <p>{props.NAME}</p>
     </div>
   );
 }
