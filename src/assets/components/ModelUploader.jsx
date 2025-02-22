@@ -1,8 +1,15 @@
-export default function ModelUploader() {
+export default function ModelUploader({ setFile }) {
+  const handleFileChange = (event) => {
+    const uploadedFile = event.target.files[0];
+    if (uploadedFile) {
+      setFile(uploadedFile);
+    }
+  };
+
   return (
-    <div id="model-uploader">
+    <div>
       <h2>Upload Model</h2>
-      <input type="file" id="file-upload" accept=".gltf, .glb" />
+      <input type="file" accept=".gltf, .glb" onChange={handleFileChange} />
     </div>
   );
 }
