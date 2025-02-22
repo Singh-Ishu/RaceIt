@@ -7,7 +7,7 @@ export default function ModelUploader({ setFile }) {
   };
 
   return (
-    <div>
+    <div id="model-uploader">
       <h2>Upload Model</h2>
       <input type="file" accept=".gltf, .glb" onChange={handleFileChange} />
     </div>

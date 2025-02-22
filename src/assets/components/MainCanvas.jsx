@@ -12,12 +12,13 @@ export default function MainCanvas(props) {
   );
 
   return (
-    <div>
+    <div id="stage-container">
       {props.file ? (
         <p>Displaying: {props.file.name}</p>
       ) : (
         <p>No model uploaded</p>
       )}
+      <canvas id="stage"></canvas>
     </div>
   );
 }
