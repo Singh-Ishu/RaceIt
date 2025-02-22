@@ -6,8 +6,16 @@ export default function LightingSelector() {
     <>
       <Card />
       <Card />
+      <br />
       <Card />
       <Card />
+      <br />
+      <Card />
+      <Card />
+      <br />
+      <Card />
+      <Card />
+      <br />
     </>
   );
 }
