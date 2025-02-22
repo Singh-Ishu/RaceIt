@@ -1,3 +1,13 @@
+import Card from "./Card";
+
 export default function LightingSelector() {
-  return <></>;
+  function setLighting() {}
+  return (
+    <>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </>
+  );
 }
