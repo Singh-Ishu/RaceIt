@@ -3,41 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
-    <title>3DFileUploader1.0</title>
+    <title>3D-showcase</title>
   </head>
   <body>
-    <div id="main-container">
-      <section id="header">
-        <h1>3D-Uploader</h1>
-      </section>
-
-      <!-- Sidebar for File Upload -->
-      <div id="sidebar">
-        <div id="upload-model">
-          <h2>Upload Model</h2>
-          <input type="file" id="file-upload" accept=" .gltf, .glb" />
-        </div>
-        <div id="lighting-selector">
-          <div id="lighting-1" class="lighting-option"></div>
-          <div id="lighting-2" class="lighting-option"></div>
-          <br />
-          <div id="lighting-3" class="lighting-option"></div>
-          <div id="lighting-4" class="lighting-option"></div>
-          <br />
-          <div id="lighting-5" class="lighting-option"></div>
-          <div id="lighting-6" class="lighting-option"></div>
-          <br />
-          <div id="lighting-7" class="lighting-option"></div>
-          <div id="lighting-8" class="lighting-option"></div>
-        </div>
-      </div>
-
-      <div id="model-canvas">
-        <canvas id="stage"></canvas>
-      </div>
-    </div>
-
-    <script type="module" src="./index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
