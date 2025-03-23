@@ -29,7 +29,6 @@ body {
   grid-column: 2/3;
   margin: 0px 0px 0px 50px;
   padding: 0;
-  border: 1px solid white;
 }
 #stage-container p {
   margin: 0;
@@ -56,4 +55,12 @@ body {
 #model-uploader {
   justify-items: center;
   width: 85%;
+}
+.light-section {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(0, 0, 255, 0.2)
+  );
+  border-radius: 15px;
+  margin-bottom: 10px;
 }

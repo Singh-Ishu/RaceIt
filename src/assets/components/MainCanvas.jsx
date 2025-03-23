@@ -26,7 +26,7 @@ export default function MainCanvas({ file }) {
     renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
 
     // Add Lighting
-    const light = new THREE.AmbientLight(0xffffff, 1);
+    const light = new THREE.AmbientLight(0xffffff, 2);
     scene.add(light);
 
     // Controls
