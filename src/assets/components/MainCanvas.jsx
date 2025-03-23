@@ -1,16 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { SceneContext } from "../../App";
 
 export default function MainCanvas({ file }) {
   const canvasRef = useRef(null);
+  const scene = useContext(SceneContext);
 
   useEffect(() => {
-    if (!canvasRef.current) return;
+    if (!canvasRef.current || !scene) return;
 
-    // Scene, Camera, Renderer Setup
-    const scene = new THREE.Scene();
+    // Camera & Renderer Setup
     const camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
@@ -25,15 +26,18 @@ export default function MainCanvas({ file }) {
     });
     renderer.setSize(window.innerWidth * 0.6, window.innerHeight * 0.6);
 
-    // Add Lighting
-    const light = new THREE.AmbientLight(0xffffff, 2);
-    scene.add(light);
+    // Lighting
+    if (!scene.userData.hasLight) {
+      const light = new THREE.AmbientLight(0xffffff, 2);
+      scene.add(light);
+      scene.userData.hasLight = true; // Prevent duplicate lights
+    }
 
     // Controls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
 
-    // Load Model if Available
+    // Load Model
     if (file) {
       const loader = new GLTFLoader();
       loader.load(URL.createObjectURL(file), (gltf) => {
@@ -42,11 +46,11 @@ export default function MainCanvas({ file }) {
     }
 
     // Animation Loop
-    function animate() {
+    const animate = () => {
       requestAnimationFrame(animate);
       controls.update();
       renderer.render(scene, camera);
-    }
+    };
     animate();
 
     // Cleanup
@@ -54,7 +58,7 @@ export default function MainCanvas({ file }) {
       renderer.dispose();
       controls.dispose();
     };
-  }, [file]);
+  }, [file, scene]); // ✅ Add scene to dependency array
 
   return (
     <div id="stage-container">
