@@ -43,11 +43,11 @@ export default function Card(props) {
         break;
       case "Purple":
         const purpleLight1 = new THREE.PointLight(0x800080, 250);
-        purpleLight1.position.set(0, 0, 0);
-        newLightGroup.add(purpleLight1, purpleLight2);
+        purpleLight1.position.set(0, 5, 0);
+        newLightGroup.add(purpleLight1);
         break;
       default:
-        const defaultLight = new THREE.AmbientLight(0xffffff, 1);
+        const defaultLight = new THREE.AmbientLight(0xffffff, 0.1);
         newLightGroup.add(defaultLight);
         break;
     }
