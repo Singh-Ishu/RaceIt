@@ -9,6 +9,7 @@ body {
   background-size: fixed;
   color: aliceblue;
   font-family: "Raleway";
+  cursor: url(assets/images/cursor1.png) 32 32, auto;
 }
 
 #main-container {
