@@ -53,7 +53,7 @@ export default function Card(props) {
     }
 
     scene.add(newLightGroup);
-    scene.userData.currentLight = newLightGroup; // Store reference for removal
+    scene.userData.currentLight = newLightGroup;
   }
 
   return (
