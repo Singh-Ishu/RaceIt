@@ -1,8 +1,14 @@
-body {
-  background-color: #310e68;
+html {
+  height: auto;
   background-image: linear-gradient(50deg, #310e68 0%, #5f0f40 74%);
-  height: 100vh;
-  color: white;
+  background-color: #310e68;
+}
+body {
+  height: auto;
+  background-attachment: fixed;
+  background-size: fixed;
+  color: aliceblue;
+  font-family: "Raleway";
 }
 
 #main-container {
@@ -53,7 +59,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 1);
   background-color: rgba(255, 255, 255, 0.1);
 }
-#card-div:hover {
+#card-div :hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
 #model-uploader {
