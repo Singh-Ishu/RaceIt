@@ -4,18 +4,18 @@ export default function LightingSelector() {
   return (
     <>
       <div className="light-section">
-        <Card NAME="Dawn" />
-        <Card NAME="Dusk" />
+        <Card NAME="Dawn" className="card-element" />
+        <Card NAME="Dusk" className="card-element" />
         <br />
       </div>
       <div className="light-section">
-        <Card NAME="Red" />
-        <Card NAME="Green" />
+        <Card NAME="Red" className="card-element" />
+        <Card NAME="Green" className="card-element" />
         <br />
-        <Card NAME="Blue" />
-        <Card NAME="Purple" />
+        <Card NAME="Blue" className="card-element" />
+        <Card NAME="Purple" className="card-element" />
         <br />
-        <Card NAME="Darken" />
+        <Card NAME="Darken" className="card-element" />
 
         <br />
       </div>

@@ -61,6 +61,9 @@ body {
   border-radius: 15px;
   margin-bottom: 10px;
 }
+.card-element {
+  background-color: rgba(red, green, blue, 1);
+}
 
 img {
   padding: 0;
