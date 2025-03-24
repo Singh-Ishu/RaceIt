@@ -59,9 +59,11 @@ export default function Card(props) {
   return (
     <div id="card-div" onClick={() => setLighting(props.NAME)}>
       <img
-        src={props.URL}
+        src={`src/assets/images/${props.NAME}.png`}
         alt={`lighting-descriptor: ${props.NAME || "No name provided"}`}
         onClick={() => setLighting(props.NAME)}
+        width="70px"
+        height="70px"
       />
       <p onClick={() => setLighting(props.NAME)}>{props.NAME}</p>
     </div>
