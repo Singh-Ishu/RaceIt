@@ -1,6 +1,6 @@
-import Sidebar from "./assets/components/Sidebar.jsx";
-import MainCanvas from "./assets/components/MainCanvas.jsx";
-import Header from "./assets/components/Header.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+import MainCanvas from "./components/MainCanvas.jsx";
+import Header from "./components/Header.jsx";
 import "./App.css";
 import { useState, createContext } from "react";
 import * as THREE from "three";

@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { SceneContext } from "../../App";
-import EventBus from "../utils/eventBus";
+import { SceneContext } from "../App";
+import EventBus from "../assets/utils/eventBus";
 
 export default function MainCanvas({ file }) {
     const canvasRef = useRef(null);
@@ -49,10 +49,6 @@ export default function MainCanvas({ file }) {
         // Event Listener for Race Start
         const handleRaceStart = () => {
             console.log("Race started - clearing scene");
-            // Clear the scene
-            while (scene.children.length > 0) {
-                scene.remove(scene.children[0]);
-            }
 
             const light = new THREE.AmbientLight(0xffffff, 2);
             scene.add(light);
