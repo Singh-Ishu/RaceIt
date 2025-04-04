@@ -1,80 +1,81 @@
 html {
-  height: auto;
-  background-image: linear-gradient(50deg, #310e68 0%, #5f0f40 74%);
-  background-color: #310e68;
+    height: auto;
+    background-image: linear-gradient(50deg, #310e68 0%, #5f0f40 74%);
+    background-color: #310e68;
 }
 body {
-  height: auto;
-  background-attachment: fixed;
-  background-size: fixed;
-  color: aliceblue;
-  font-family: "Raleway";
-  cursor: url(assets/images/cursor1.png) 32 32, auto;
+    height: auto;
+    background-attachment: fixed;
+    background-size: fixed;
+    color: aliceblue;
+    font-family: "Raleway";
+    cursor: url(assets/images/cursor1.png) 32 32, auto;
 }
 
 #main-container {
-  display: grid;
-  grid-template-rows: 20% 80%;
-  grid-template-columns: 30% 65%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 30% 65%;
 }
 
 #header {
-  grid-row: 1/2;
-  grid-column: 1/3;
-  justify-self: center;
-  font-size: 4em;
+    grid-row: 1/2;
+    grid-column: 1/3;
+    justify-self: center;
+    font-size: 4em;
 }
 #sidebar {
-  grid-row: 2/3;
-  grid-column: 1/2;
-  background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 5px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px;
 }
 #stage-container {
-  grid-row: 2/3;
-  grid-column: 2/3;
-  margin: 0px 0px 0px 50px;
-  padding: 0;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    margin: 0px 0px 0px 50px;
+    padding: 0;
 }
 #stage-container p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 #card-div,
 #model-uploader {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 
-  padding: 8px;
-  margin: 8px;
-  display: inline-block;
-  justify-items: center;
-  transition: 0.5s;
+    padding: 8px;
+    margin: 8px;
+    display: inline-block;
+    justify-items: center;
+    transition: 0.5s;
 }
 #card-div {
-  width: 40%;
-  border: 1px solid rgba(255, 255, 255, 1);
-  background-color: rgba(255, 255, 255, 0.1);
+    width: 40%;
+    border: 1px solid rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 #card-div:hover,
 #model-uploader:hover {
-  background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 1);
 }
 #model-uploader {
-  justify-items: center;
-  width: 85%;
+    justify-items: center;
+    width: 85%;
 }
+
 .light-section {
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 img {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
