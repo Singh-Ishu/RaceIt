@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { SceneContext } from "../App";
-import EventBus from "../assets/utils/eventBus";
+import EventBus from "../utils/eventBus";
 
 export default function MainCanvas({ file }) {
     const canvasRef = useRef(null);

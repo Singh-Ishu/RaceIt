@@ -1,7 +1,7 @@
 import { SceneContext } from "../App";
 import { useContext } from "react";
 import * as THREE from "three";
-import EventBus from "../assets/utils/eventBus.js";
+import EventBus from "../utils/eventBus.js";
 
 export default function Card(props) {
     const scene = useContext(SceneContext);
