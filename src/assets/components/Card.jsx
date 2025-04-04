@@ -1,6 +1,7 @@
 import { SceneContext } from "../../App";
 import { useContext } from "react";
 import * as THREE from "three";
+import EventBus from "../utils/eventBus.js";
 
 export default function Card(props) {
     const scene = useContext(SceneContext);
@@ -47,8 +48,7 @@ export default function Card(props) {
                 newLightGroup.add(purpleLight1);
                 break;
             case "START RACE":
-                scene.clear();
-
+                EventBus.emit("RACE_STARTED", { message: "Race started!" });
                 break;
             default:
                 const defaultLight = new THREE.AmbientLight(0xffffff, 0.1);
