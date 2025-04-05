@@ -50,15 +50,21 @@ export default function MainCanvas({ file }) {
         const handleRaceStart = () => {
             console.log("Race started - clearing scene");
 
-            const light = new THREE.AmbientLight(0xffffff, 2);
+            const light = new THREE.AmbientLight(0xffffff, 4);
             scene.add(light);
 
+            const loader = new GLTFLoader();
+
             if (file) {
-                const loader = new GLTFLoader();
                 loader.load(URL.createObjectURL(file), (gltf) => {
                     scene.add(gltf.scene);
                 });
             }
+
+            loader.load(
+                "src/assets/models/karting_club_lider__karting_race_track_early/scene.gltf",
+                (gltf) => scene.add(gltf.scene)
+            );
         };
 
         EventBus.on("RACE_STARTED", handleRaceStart);
