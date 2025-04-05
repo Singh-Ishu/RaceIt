@@ -49,8 +49,13 @@ export default function MainCanvas({ file }) {
         // Event Listener for Race Start
         const handleRaceStart = () => {
             console.log("Race started - clearing scene");
+            while (scene.children.length > 0) {
+                const child = scene.children[0];
+                scene.remove(child);
+                if (child.dispose) child.dispose(); // Cleanup materials/geometries
+            }
 
-            const light = new THREE.AmbientLight(0xffffff, 4);
+            const light = new THREE.AmbientLight(0xffffff, 2);
             scene.add(light);
 
             const loader = new GLTFLoader();
